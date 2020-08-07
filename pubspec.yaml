@@ -1,0 +1,40 @@
+name: weatherapp
+description: V1 of the Weather App that Development Monitors is going to deploy in Afghanistan
+
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.1.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^0.1.2
+  http: ^0.12.1
+  intl: ^0.16.1
+  toast: ^0.1.5
+  url_launcher: ^5.4.10
+  timezone: ^0.5.7
+  flutter_svg: ^0.17.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+
+flutter:
+  uses-material-design: true
+
+  fonts:
+    - family: SourceSansPro
+      fonts:
+        - asset: assets/fonts/SourceSansPro-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/SourceSansPro-Regular.ttf
+          weight: 400
+
+  assets:
+    - assets/images/
+    - assets/icons/
