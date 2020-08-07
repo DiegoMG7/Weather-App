@@ -139,27 +139,25 @@ class _TodayState extends State<Today> {
     final _scrollController = ScrollController();
 
     return Scaffold(
-        appBar: AppBar(leading: Padding(
-          padding: EdgeInsets.only(right: 7.0),
-          child: IconButton(
-            icon: Icon(Icons.settings),
-            color: Styles.btn1Color,
-            iconSize: 40,
-            onPressed: (){
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => Options(),
-                ),
-              );
-            },
-          ),
+        appBar: AppBar(leading: IconButton(
+          icon: Icon(Icons.settings),
+          color: Styles.btn1Color,
+          iconSize: 35,
+          onPressed: (){
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => Options(),
+              ),
+            );
+          },
         ),
+          //title: Text('${dateConverter(tzData)}', style: Styles.navBarTitle),
           title: Center(child: Text('${dateConverter(tzData)}', style: Styles.navBarTitle)),
           backgroundColor: Styles.header1Color,
           actions: <Widget>[
             Padding(
-              padding: EdgeInsets.only(right: 7.0),
+              padding: EdgeInsets.only(right: 1.0),
               child: GestureDetector(
                 onTap: () {
                   Navigator.push(
@@ -184,7 +182,7 @@ class _TodayState extends State<Today> {
               Container(
                 child: Row(children: <Widget>[
                   Padding(
-                      padding: const EdgeInsets.fromLTRB(90.0,0.0,10.0,0.0),
+                      padding: const EdgeInsets.fromLTRB(70.0,0.0,10.0,0.0),
                       child: Image.asset('assets/images/${getWeatherIcon(weatherCode)}.png',alignment: Alignment.center,height: 65,width: 65)
                   ),
                   Text(                                                                   //name of the App

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class Styles
 {
-  static const _textSizeLarge = 26.0;
+  static const _textSizeLarge = 24.0;
   static const _textSizeMid = 20.0;
   static const _textSizeDefault = 18.0;
   static final Color textColorStrong = _hexToColor('000000');//regular text(black)
@@ -16,7 +16,7 @@ class Styles
 
   static final navBarTitle = TextStyle(
     fontFamily: _fontNameHeader,
-    fontSize: _textSizeLarge,
+    fontSize: _textSizeMid,
   );
 
   static final header1 = TextStyle(
