@@ -17,9 +17,21 @@ class _GlossaryState extends State<Glossary> {
         children: <Widget>[
           Card(
             child: ListTile(
+              title: Center(child: Text('Weather Measures', style: Styles.header2)),
+            ),
+          ),
+          Card(
+            child: ListTile(
               leading: SvgPicture.asset('assets/icons/currTemp.svg',color: Colors.black,height: 40,width: 40),
               title: Text('Current Temperature', style: Styles.textDefault),
               subtitle: Text('The temperature reading at the time of last update', style: TextStyle(fontSize: 16, fontFamily: 'SourceSansPro-Regular')),
+            ),
+          ),
+          Card(
+            child: ListTile(
+              leading: SvgPicture.asset('assets/icons/humidity.svg',color: Colors.black,height: 35,width: 35),
+              title: Text('Humidity', style: Styles.textDefault),
+              subtitle: Text('Concentration percentage of water vapor present in the air', style: TextStyle(fontSize: 16, fontFamily: 'SourceSansPro-Regular')),
             ),
           ),
           Card(
@@ -38,13 +50,6 @@ class _GlossaryState extends State<Glossary> {
           ),
           Card(
             child: ListTile(
-              leading: Icon(Icons.access_time, size: 36, color: Colors.black),
-              title: Text('Time of Reading', style: Styles.textDefault),
-              subtitle: Text('The time at which the measurement was last taken', style: TextStyle(fontSize: 16, fontFamily: 'SourceSansPro-Regular')),
-            ),
-          ),
-          Card(
-            child: ListTile(
               leading: SvgPicture.asset('assets/icons/precipitation.svg',color: Colors.black,height: 30,width: 30),
               title: Text('Precipitation', style: Styles.textDefault),
               subtitle: Text('The cumulative amount of rain in the last 24 hours', style: TextStyle(fontSize: 16, fontFamily: 'SourceSansPro-Regular')),
@@ -52,9 +57,23 @@ class _GlossaryState extends State<Glossary> {
           ),
           Card(
             child: ListTile(
-              leading: SvgPicture.asset('assets/icons/humidity.svg',color: Colors.black,height: 35,width: 35),
-              title: Text('Humidity', style: Styles.textDefault),
-              subtitle: Text('Concentration percentage of water vapor present in the air', style: TextStyle(fontSize: 16, fontFamily: 'SourceSansPro-Regular')),
+              leading: SvgPicture.asset('assets/icons/sunrise.svg',color: Colors.black,height: 40,width: 40),
+              title: Text('Sunrise', style: Styles.textDefault),
+              subtitle: Text('the time in the morning when the sun appears or full daylight arrives', style: TextStyle(fontSize: 16, fontFamily: 'SourceSansPro-Regular')),
+            ),
+          ),
+          Card(
+            child: ListTile(
+              leading: SvgPicture.asset('assets/icons/sunset.svg',color: Colors.black,height: 40,width: 40),
+              title: Text('Sunset', style: Styles.textDefault),
+              subtitle: Text('The time in the evening when the sun disappears or daylight fades', style: TextStyle(fontSize: 16, fontFamily: 'SourceSansPro-Regular')),
+            ),
+          ),
+          Card(
+            child: ListTile(
+              leading: Icon(Icons.access_time, size: 36, color: Colors.black),
+              title: Text('Time of Reading', style: Styles.textDefault),
+              subtitle: Text('The time at which the measurement was last taken', style: TextStyle(fontSize: 16, fontFamily: 'SourceSansPro-Regular')),
             ),
           ),
           Card(
@@ -73,16 +92,13 @@ class _GlossaryState extends State<Glossary> {
           ),
           Card(
             child: ListTile(
-              leading: SvgPicture.asset('assets/icons/sunset.svg',color: Colors.black,height: 40,width: 40),
-              title: Text('Wind Speed', style: Styles.textDefault),
-              subtitle: Text('The time in the evening when the sun disappears or daylight fades', style: TextStyle(fontSize: 16, fontFamily: 'SourceSansPro-Regular')),
+              title: Center(child: Text('Weather Conditions', style: Styles.header2)),
             ),
           ),
           Card(
             child: ListTile(
-              leading: SvgPicture.asset('assets/icons/sunrise.svg',color: Colors.black,height: 40,width: 40),
-              title: Text('Wind Speed', style: Styles.textDefault),
-              subtitle: Text('the time in the morning when the sun appears or full daylight arrives', style: TextStyle(fontSize: 16, fontFamily: 'SourceSansPro-Regular')),
+              leading: Image.asset('assets/images/brokenclouds.png'),
+              title: Text('Broken clouds', style: Styles.textDefault),
             ),
           ),
           Card(
@@ -93,26 +109,8 @@ class _GlossaryState extends State<Glossary> {
           ),
           Card(
             child: ListTile(
-              leading: Image.asset('assets/images/thunderstorm.png'),
-              title: Text('Thunderstorm', style: Styles.textDefault),
-            ),
-          ),
-          Card(
-            child: ListTile(
               leading: Image.asset('assets/images/drizzle.png'),
               title: Text('Drizzle', style: Styles.textDefault),
-            ),
-          ),
-          Card(
-            child: ListTile(
-              leading: Image.asset('assets/images/rain.png'),
-              title: Text('Rain', style: Styles.textDefault),
-            ),
-          ),
-          Card(
-            child: ListTile(
-              leading: Image.asset('assets/images/snow.png'),
-              title: Text('Snow', style: Styles.textDefault),
             ),
           ),
           Card(
@@ -123,14 +121,26 @@ class _GlossaryState extends State<Glossary> {
           ),
           Card(
             child: ListTile(
+              leading: Image.asset('assets/images/rain.png'),
+              title: Text('Rain', style: Styles.textDefault),
+            ),
+          ),
+          Card(
+            child: ListTile(
               leading: Image.asset('assets/images/scatteredclouds.png'),
               title: Text('Scattered clouds', style: Styles.textDefault),
             ),
           ),
           Card(
             child: ListTile(
-              leading: Image.asset('assets/images/brokenclouds.png'),
-              title: Text('Broken clouds', style: Styles.textDefault),
+              leading: Image.asset('assets/images/snow.png'),
+              title: Text('Snow', style: Styles.textDefault),
+            ),
+          ),
+          Card(
+            child: ListTile(
+              leading: Image.asset('assets/images/thunderstorm.png'),
+              title: Text('Thunderstorm', style: Styles.textDefault),
             ),
           ),
         ],

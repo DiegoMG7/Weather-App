@@ -75,57 +75,48 @@ class _TodayState extends State<Today> {
         DataRow(cells:[
           DataCell(Text('Current Temperature',style: Styles.textDefault)),
           DataCell(SvgPicture.asset('assets/icons/currTemp.svg',color: Colors.black,height: 40,width: 40)),
-          //DataCell(Image(image: AssetImage('assets/icons/avgTemp.png'))),
           DataCell(Text('$currTemp°C',style: Styles.textDefault)),
 
         ]),
         DataRow(cells:[
           DataCell(Text('Max Temperature',style: Styles.textDefault)),
-          //DataCell(Image(image: AssetImage('assets/icons/maxTemp.png'))),
           DataCell(SvgPicture.asset('assets/icons/maxTemp.svg',color: Colors.black,height: 40,width: 40)),
           DataCell(Text('${tempConverter(maxTemp)}°C',style: Styles.textDefault)),
         ]),
         DataRow(cells:[
           DataCell(Text('Min Temperature',style: Styles.textDefault)),
-          //DataCell(Image(image: AssetImage('assets/icons/minTemp.png'))),
           DataCell(SvgPicture.asset('assets/icons/minTemp.svg',color: Colors.black,height: 40,width: 40)),
           DataCell(Text('${tempConverter(minTemp)}°C',style: Styles.textDefault)),
         ]),
         DataRow(cells:[
           DataCell(Text('Humidity',style: Styles.textDefault)),
           DataCell(SvgPicture.asset('assets/icons/humidity.svg',color: Colors.black,height: 35,width: 35)),
-          //DataCell(Image(image: AssetImage('assets/icons/humidity.png'))),
           DataCell(Text('$humidity%',style: Styles.textDefault)),
         ]),
         DataRow(cells:[
           DataCell(Text('Wind Direction',style: Styles.textDefault)),
-          //DataCell(Image(image: AssetImage('assets/icons/compass-solid.svg'))),
           DataCell(SvgPicture.asset('assets/icons/compass.svg',color: Colors.black,height: 30,width: 30)),
           DataCell(Text('${windDir(windDirection)}',style: Styles.textDefault)),
         ]),
         DataRow(cells:[
           DataCell(Text('Wind Speed',style: Styles.textDefault)),
           DataCell(SvgPicture.asset('assets/icons/wind.svg',color: Colors.black,height: 30,width: 30)),
-          //DataCell(Image(image: AssetImage('assets/icons/wind.png'))),
           DataCell(Text('$windSpeedmph kph',style: Styles.textDefault)),
         ]),
         DataRow(cells:[
           DataCell(Text('Precipitation',style: Styles.textDefault)),
-          //DataCell(Image(image: AssetImage('assets/icons/rain.png'))),
           DataCell(SvgPicture.asset('assets/icons/precipitation.svg',color: Colors.black,height: 30,width: 30)),
           DataCell(Text('${rainConverter(dailyRain)}mm',style: Styles.textDefault)),
 
         ]),
         DataRow(cells:[
           DataCell(Text('Sunrise',style: Styles.textDefault)),
-          //DataCell(Image(image: AssetImage('assets/icons/sunrise.png'))),
           DataCell(SvgPicture.asset('assets/icons/sunrise.svg',color: Colors.black,height: 40,width: 40)),
           DataCell(Text('${timestampConverter(sunrise)}',style: Styles.textDefault)),
 
         ]),
         DataRow(cells:[
           DataCell(Text('Sunset',style: Styles.textDefault)),
-          //DataCell(Image(image: AssetImage('assets/icons/sunset.png'))),
           DataCell(SvgPicture.asset('assets/icons/sunset.svg',color: Colors.black,height: 40,width: 40)),
           DataCell(Text('${timestampConverter(sunset)}',style: Styles.textDefault)),
 

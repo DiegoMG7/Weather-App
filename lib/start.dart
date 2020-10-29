@@ -18,7 +18,7 @@ class Start extends StatefulWidget {
 }
 
 class _StartState extends State<Start> {
-  String dropdownValue = 'Kandahar 01';
+  String dropdownValue = 'Select an option';
   String selectionValue;
 
   void getData(String valueWS) async {
@@ -27,13 +27,13 @@ class _StartState extends State<Start> {
     String lon;
     String timeZ;
 
-    if(valueWS == 'Kandahar 01'){
+    if(valueWS == 'Kandahar, Mohammad Akram'){
       macValue = '84:F3:EB:54:51:76';
       lat = '31.62887';
       lon = '65.73717';
       timeZ = 'Asia/Kabul';
     }
-    else if(valueWS == 'Panjshir 01'){
+    else if(valueWS == 'Panjshir, Big Mohammad Khil'){
       macValue = '84:F3:EB:54:50:54';
       lat = '35.50257';
       lon = '69.95503';
@@ -45,19 +45,33 @@ class _StartState extends State<Start> {
       lon = '69.11896';
       timeZ = 'Asia/Kabul';
     }
-    else if(valueWS == 'World Bank'){
+    else if(valueWS == 'Kabul, World Bank'){
       macValue = '3C:71:BF:3E:A6:17';
       lat = '34.55534';
       lon = '69.20748';
       timeZ = 'Asia/Kabul';
     }
-    else if(valueWS == 'Badakhshan 01'){
+    else if(valueWS == 'Badakhshan, Qaragh Awal'){
       macValue = 'A4:CF:12:A0:2D:77';
       lat = '36.73477';
       lon = '70.81199';
       timeZ = 'Asia/Kabul';
     }
-    else if(valueWS == 'Chapel Hill'){
+    else if(valueWS == 'Badakhshan, Sare Kotal'){
+      macValue = 'A4:CF:12:B4:ED:F1';
+      lat = '36.96944';
+      lon = '70.35111';
+      timeZ = 'Asia/Kabul';
+      //03
+    }
+    else if(valueWS == 'Badakhshan, Naw Abad Pingani'){
+      macValue = 'A4:CF:12:A0:2D:F3';
+      lat = '37.00099';
+      lon = '70.27300';
+      timeZ = 'Asia/Kabul';
+      //02
+    }
+    else if(valueWS == 'Chapel Hill, USA'){
       macValue = '3C:71:BF:3E:A2:C0';
       lat = '35.913199';
       lon = '-79.05584';
@@ -88,16 +102,6 @@ class _StartState extends State<Start> {
     } on Error catch (_){
       Toast.show("Weather Station not reporting", context, duration: Toast.LENGTH_LONG, gravity:  Toast.BOTTOM);
     }
-    /*
-    if(weatherData[0] == null)
-      Toast.show("Weather Station not reporting", context, duration: Toast.LENGTH_LONG, gravity:  Toast.BOTTOM);
-    else{
-      Navigator.push(context, MaterialPageRoute(builder: (context){
-        return Today(
-          weather: weatherData,
-        );
-      }));
-    }*/
   }
 
   @override
@@ -154,7 +158,7 @@ class _StartState extends State<Start> {
                             //print(selectionValue);
                           });
                         },
-                        items: <String>['Kandahar 01', 'Panjshir 01', 'MRRD', 'World Bank','Badakhshan 01','Chapel Hill']
+                        items: <String>['Select an option','Kandahar, Mohammad Akram', 'Panjshir, Big Mohammad Khil', 'Kabul, World Bank','Badakhshan, Qaragh Awal','Badakhshan, Sare Kotal','Badakhshan, Naw Abad Pingani','Chapel Hill, USA']
                             .map<DropdownMenuItem<String>>((String value) {
                           return DropdownMenuItem<String>(
                             value: value,
@@ -169,7 +173,7 @@ class _StartState extends State<Start> {
                     textColor: Colors.white,
                     child: const Text(
                       'Next',
-                      style: TextStyle(fontSize: 30), textAlign: TextAlign.center,
+                      style: TextStyle(fontSize: 24), textAlign: TextAlign.center,
                     ),
                     onPressed: () {
                       getData(selectionValue);

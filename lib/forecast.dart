@@ -23,10 +23,6 @@ class _ForecastState extends State<Forecast> {
   List<int> maxTemp = List<int>(7);
   List<int> minTemp = List<int>(7);
   List<String> days = List<String>(7);
-  //List<int> windDir = List<int>(3);
-  //List<String> humidity = List<String>(3);
-  //List<String> windSpeed = List<String>(3);
-  //List<String> precipitation = List<String>(3);
 
   @override
   void initState(){
@@ -42,16 +38,6 @@ class _ForecastState extends State<Forecast> {
       maxTemp[i] = (weatherOW['daily'][i]['temp']['max']).toInt();
       minTemp[i] = (weatherOW['daily'][i]['temp']['min']).toInt();
       days[i] = (DateFormat('EEEE').format(dateAux));
-      /*
-      windDir[i] = (weatherOW['daily'][i]['wind_deg']).toInt();
-      humidity[i] = (weatherOW['daily'][i]['humidity']).toString();
-      windSpeed[i] = (weatherOW['daily'][i]['wind_speed']).toString();
-      if(weatherOW['daily'][i]['rain'] == null)
-        precipitation[i] = '0';
-      else
-        precipitation[i] = (weatherOW['daily'][i]['rain']).toString();
-
-      */
     }
   }
 
@@ -159,12 +145,10 @@ class _ForecastState extends State<Forecast> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: Padding(
-          padding: EdgeInsets.only(left: 7.0),
-          child: IconButton(
+        leading: IconButton(
             icon: Icon(Icons.settings),
             color: Styles.btn1Color,
-            iconSize: 40,
+            iconSize: 35,
             onPressed: (){
               Navigator.push(
                 context,
@@ -174,7 +158,6 @@ class _ForecastState extends State<Forecast> {
               );
             },
           ),
-        ),
         title: Center(child: Text('Forecast', style: Styles.navBarTitle)),
         backgroundColor: Styles.header1Color,
           actions: <Widget>[

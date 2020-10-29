@@ -14,7 +14,7 @@ class _AboutState extends State<About> {
   void _launchURL() async {
     final Uri params = Uri(
       scheme: 'mailto',
-      path: 'glewis@developmentmonitors.com',
+      path: 'Support@developmentmonitors.com',
       query: 'subject=Community Weatherboard App Feedback&body= please write your feedback here',
     );
     var url = params.toString();
@@ -50,7 +50,7 @@ class _AboutState extends State<About> {
             Padding(
               padding: const EdgeInsets.fromLTRB(0.0,0.0,0.0,0.0),
               child: new InkWell(
-                child: new Text('glewis@developmentmonitors.com',style: TextStyle(color: Colors.blueAccent,fontSize: 18),),
+                child: new Text('Support@developmentmonitors.com',style: TextStyle(color: Colors.blueAccent,fontSize: 18),),
                   onTap: () => _launchURL(),
               )
             ),
