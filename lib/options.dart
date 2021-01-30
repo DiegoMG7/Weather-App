@@ -4,6 +4,7 @@ import 'package:weatherapp/start.dart';
 import 'package:weatherapp/about.dart';
 import 'package:weatherapp/glossary.dart';
 import 'styles.dart';
+import 'package:weatherapp/services/app_localizations.dart';
 
 class OptionsView extends StatefulWidget {
   @override
@@ -18,7 +19,7 @@ class _OptionsViewState extends State<OptionsView> {
         Card(
           child: ListTile(
             trailing: Icon(Icons.edit_location, size: 50, color: Colors.black),
-            title: Text('Change Location', style: Styles.textDefault),
+            title: Text(AppLocalizations.of(context).translate('s55'), style: Styles.textDefault),
             enabled: true,
             onTap: () {
               Navigator.push(
@@ -30,17 +31,17 @@ class _OptionsViewState extends State<OptionsView> {
             },
           ),
         ),
-        Card(
-          child: ListTile(
-            trailing: Icon(Icons.pin_drop, size: 45, color: Colors.black),
-            title: Text('Show Location', style: Styles.textDefault),
-            subtitle: Text('Under Construction'),
-          ),
-        ),
+//        Card(
+//          child: ListTile(
+//            trailing: Icon(Icons.pin_drop, size: 45, color: Colors.black),
+//            title: Text(AppLocalizations.of(context).translate('s56'), style: Styles.textDefault),
+//            subtitle: Text(AppLocalizations.of(context).translate('s57')),
+//          ),
+//        ),
         Card(
           child: ListTile(
             trailing: Icon(Icons.spellcheck, size: 45, color: Colors.black),
-            title: Text('Glossary of Terms', style: Styles.textDefault),
+            title: Text(AppLocalizations.of(context).translate('s58'), style: Styles.textDefault),
             enabled: true,
             onTap: () {
               Navigator.push(
@@ -55,7 +56,7 @@ class _OptionsViewState extends State<OptionsView> {
         Card(
           child: ListTile(
             trailing: Icon(Icons.info, size: 45, color: Colors.black),
-            title: Text('About', style: Styles.textDefault),
+            title: Text(AppLocalizations.of(context).translate('s59'), style: Styles.textDefault),
             enabled: true,
             onTap: () {
               Navigator.push(
@@ -76,7 +77,7 @@ class Options extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: Center(child: Text('Settings', style: Styles.navBarTitle)),backgroundColor: Styles.header1Color),
+        appBar: AppBar(title: Center(child: Text(AppLocalizations.of(context).translate('s54'), style: Styles.navBarTitle)),backgroundColor: Styles.header1Color),
         body:OptionsView(),
     );
   }

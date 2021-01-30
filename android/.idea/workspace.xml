@@ -1,30 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="853c7ea8-109b-4c19-8990-98b9d8a439b6" name="Default Changelist" comment="">
+    <list default="true" id="370558e2-de6b-403d-9f19-2bed6422c3b4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../Lang/pa.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../assets/icons/avgTemp.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../assets/icons/calendarDay.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../assets/icons/compass.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../assets/icons/humidity.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../assets/icons/maxTemp.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../assets/icons/minTemp.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../assets/icons/rain.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../assets/icons/sunrise.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../assets/icons/sunrise.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/icons/sunrise.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../assets/icons/sunset.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../assets/icons/wind.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../assets/images/brokenclouds.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/images/brokenclouds.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../assets/images/clearsky.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/images/clearsky.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../assets/images/drizzle.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/images/drizzle.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../assets/images/mist.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/images/mist.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../assets/images/rain.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/images/rain.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../assets/images/scatteredclouds.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/images/scatteredclouds.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../assets/images/snow.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/images/snow.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../assets/images/startScr.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/images/startScr.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../assets/images/thunderstorm.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/images/thunderstorm.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../lib/about.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../lib/about.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lib/app.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../lib/app.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../lib/forecast.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../lib/forecast.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../lib/glossary.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../lib/glossary.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lib/services/time.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../lib/services/time.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lib/options.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../lib/options.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../lib/start.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../lib/start.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lib/styles.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../lib/styles.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../lib/today.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../lib/today.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../pubspec.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../pubspec.yaml" afterDir="false" />
@@ -35,7 +31,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="Pixel_2_API_29" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="Copy_of_Pixel_2_API_29" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -57,7 +53,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectId" id="1i75fUkgB2B8fWR4qJhf7YYqBzm" />
+  <component name="ProjectId" id="1nFOqiev1nRLdxoMEbP34M2q5mf" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="ApkExportedModule" value="app" />
@@ -147,11 +143,11 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="853c7ea8-109b-4c19-8990-98b9d8a439b6" name="Default Changelist" comment="" />
-      <created>1601245892476</created>
+      <changelist id="370558e2-de6b-403d-9f19-2bed6422c3b4" name="Default Changelist" comment="" />
+      <created>1610982564526</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1601245892476</updated>
+      <updated>1610982564526</updated>
     </task>
     <servers />
   </component>

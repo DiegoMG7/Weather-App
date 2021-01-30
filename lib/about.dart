@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'styles.dart';
+import 'package:weatherapp/services/app_localizations.dart';
 
 class About extends StatefulWidget {
   @override
@@ -28,7 +28,7 @@ class _AboutState extends State<About> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Center(child: Text('About this App', style: Styles.navBarTitle)),backgroundColor: Styles.header1Color),
+      appBar: AppBar(title: Center(child: Text(AppLocalizations.of(context).translate('s91'), style: Styles.navBarTitle)),backgroundColor: Styles.header1Color),
       body: SafeArea(
         child: Column(
           children: <Widget>[
@@ -36,14 +36,14 @@ class _AboutState extends State<About> {
             Padding(
               padding: const EdgeInsets.fromLTRB(10.0,0.0,10.0,15.0),
               child: Text(                                                                   //name of the App
-                'This mobile app was developed for community beneficiaries as part of a technical assistance project in Afghanistan funded by the WorldBank.',
+                AppLocalizations.of(context).translate('s92'),
                 style:Styles.textDefault,
               ),
             ),
             Padding(
               padding: const EdgeInsets.fromLTRB(10.0,15.0,10.0,15.0),
               child: Text(                                                                   //name of the App
-                'For additional information please send your question(s) and/or comments to:',
+                AppLocalizations.of(context).translate('s93'),
                 style:Styles.textDefault,
               ),
             ),

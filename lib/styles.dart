@@ -5,6 +5,7 @@ class Styles
   static const _textSizeLarge = 24.0;
   static const _textSizeMid = 20.0;
   static const _textSizeDefault = 18.0;
+  static const _textSizeDefault2 = 15.0;
   static final Color textColorStrong = _hexToColor('000000');//regular text(black)
   static final Color header1Color = _hexToColor('3B7EA7');//Company Palette
   static final Color btn1Color = _hexToColor('4B4D4F');
@@ -31,9 +32,15 @@ class Styles
   );
 
   static final textDefault = TextStyle(
-    fontFamily: _fontNameDefault,
-    fontSize: _textSizeDefault,
-    color: Colors.black
+      fontFamily: _fontNameDefault,
+      fontSize: _textSizeDefault,
+      color: Colors.black
+  );
+
+  static final textDefault2 = TextStyle(
+      fontFamily: _fontNameDefault,
+      fontSize: _textSizeDefault2,
+      color: Colors.black
   );
 
 
