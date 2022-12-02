@@ -16,10 +16,25 @@ class _OptionsViewState extends State<OptionsView> {
   Widget build(BuildContext context) {
     return ListView(
       children: <Widget>[
+//        Card(
+//          child: ListTile(
+//            trailing: Icon(Icons.edit_location, size: 50, color: Colors.black),
+//            title: Text(AppLocalizations.of(context).translate('s55'), style: Styles.textDefault),
+//            enabled: true,
+//            onTap: () {
+//              Navigator.push(
+//                context,
+//                MaterialPageRoute(
+//                  builder: (context) => Start(),
+//                ),
+//              );
+//            },
+//          ),
+//        ),
         Card(
           child: ListTile(
-            trailing: Icon(Icons.edit_location, size: 50, color: Colors.black),
-            title: Text(AppLocalizations.of(context).translate('s55'), style: Styles.textDefault),
+            trailing: Icon(Icons.translate, size: 50, color: Colors.black),
+            title: Text(AppLocalizations.of(context).translate('s94'), style: Styles.textDefault),
             enabled: true,
             onTap: () {
               Navigator.push(
@@ -31,13 +46,6 @@ class _OptionsViewState extends State<OptionsView> {
             },
           ),
         ),
-//        Card(
-//          child: ListTile(
-//            trailing: Icon(Icons.pin_drop, size: 45, color: Colors.black),
-//            title: Text(AppLocalizations.of(context).translate('s56'), style: Styles.textDefault),
-//            subtitle: Text(AppLocalizations.of(context).translate('s57')),
-//          ),
-//        ),
         Card(
           child: ListTile(
             trailing: Icon(Icons.spellcheck, size: 45, color: Colors.black),

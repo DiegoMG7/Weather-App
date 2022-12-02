@@ -92,44 +92,44 @@ class _ForecastState extends State<Forecast> {
         DataRow(cells:[
           DataCell(Text('${days[0]}',style: Styles.textDefault2)),
           DataCell(Image(image: AssetImage('assets/images/${getWeatherIcon(weatherCode[0])}.png'), height: 30, width: 30,)),
-          DataCell(Text('${maxTemp[0]}°C',style: Styles.textDefault2)),
-          DataCell(Text('${minTemp[0]}°C',style: Styles.textDefault2)),
+          DataCell(Text('${tempConverter(maxTemp[0])}°C',style: Styles.textDefault2)),
+          DataCell(Text('${tempConverter(minTemp[0])}°C',style: Styles.textDefault2)),
         ]),
         DataRow(cells:[
           DataCell(Text('${days[1]}',style: Styles.textDefault2)),
           DataCell(Image(image: AssetImage('assets/images/${getWeatherIcon(weatherCode[1])}.png'), height: 30, width: 30,)),
-          DataCell(Text('${maxTemp[1]}°C',style: Styles.textDefault2)),
-          DataCell(Text('${minTemp[1]}°C',style: Styles.textDefault2)),
+          DataCell(Text('${tempConverter(maxTemp[1])}°C',style: Styles.textDefault2)),
+          DataCell(Text('${tempConverter(minTemp[1])}°C',style: Styles.textDefault2)),
         ]),
         DataRow(cells:[
           DataCell(Text('${days[2]}',style: Styles.textDefault2)),
           DataCell(Image(image: AssetImage('assets/images/${getWeatherIcon(weatherCode[2])}.png'), height: 30, width: 30,)),
-          DataCell(Text('${maxTemp[2]}°C',style: Styles.textDefault2)),
-          DataCell(Text('${minTemp[2]}°C',style: Styles.textDefault2)),
+          DataCell(Text('${tempConverter(maxTemp[2])}°C',style: Styles.textDefault2)),
+          DataCell(Text('${tempConverter(minTemp[2])}°C',style: Styles.textDefault2)),
         ]),
         DataRow(cells:[
           DataCell(Text('${days[3]}',style: Styles.textDefault2)),
           DataCell(Image(image: AssetImage('assets/images/${getWeatherIcon(weatherCode[3])}.png'), height: 30, width: 30,)),
-          DataCell(Text('${maxTemp[3]}°C',style: Styles.textDefault2)),
-          DataCell(Text('${minTemp[3]}°C',style: Styles.textDefault2)),
+          DataCell(Text('${tempConverter(maxTemp[3])}°C',style: Styles.textDefault2)),
+          DataCell(Text('${tempConverter(minTemp[3])}°C',style: Styles.textDefault2)),
         ]),
         DataRow(cells:[
           DataCell(Text('${days[4]}',style: Styles.textDefault2)),
           DataCell(Image(image: AssetImage('assets/images/${getWeatherIcon(weatherCode[4])}.png'), height: 30, width: 30,)),
-          DataCell(Text('${maxTemp[4]}°C',style: Styles.textDefault2)),
-          DataCell(Text('${minTemp[4]}°C',style: Styles.textDefault2)),
+          DataCell(Text('${tempConverter(maxTemp[4])}°C',style: Styles.textDefault2)),
+          DataCell(Text('${tempConverter(minTemp[4])}°C',style: Styles.textDefault2)),
         ]),
         DataRow(cells:[
           DataCell(Text('${days[5]}',style: Styles.textDefault2)),
           DataCell(Image(image: AssetImage('assets/images/${getWeatherIcon(weatherCode[5])}.png'), height: 30, width: 30,)),
-          DataCell(Text('${maxTemp[5]}°C',style: Styles.textDefault2)),
-          DataCell(Text('${minTemp[5]}°C',style: Styles.textDefault2)),
+          DataCell(Text('${tempConverter(maxTemp[5])}°C',style: Styles.textDefault2)),
+          DataCell(Text('${tempConverter(minTemp[5])}°C',style: Styles.textDefault2)),
         ]),
         DataRow(cells:[
           DataCell(Text('${days[6]}',style: Styles.textDefault2)),
           DataCell(Image(image: AssetImage('assets/images/${getWeatherIcon(weatherCode[6])}.png'), height: 30, width: 30,)),
-          DataCell(Text('${maxTemp[6]}°C',style: Styles.textDefault2)),
-          DataCell(Text('${minTemp[6]}°C',style: Styles.textDefault2)),
+          DataCell(Text('${tempConverter(maxTemp[6])}°C',style: Styles.textDefault2)),
+          DataCell(Text('${tempConverter(minTemp[6])}°C',style: Styles.textDefault2)),
         ]),
       ],
   );
@@ -288,6 +288,12 @@ class _ForecastState extends State<Forecast> {
       backgroundColor: Styles.bColor2,
     );
   }
+}
+
+int tempConverter(int temp){
+  int result;
+  result = ((temp-32)*(5/9)).toInt();
+  return result;
 }
 
 String getWeatherIcon(int code){

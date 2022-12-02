@@ -26,10 +26,11 @@ class _TodayState extends State<Today> {
   String weatherCondition;
   double lat;
   double lon;
-  var sunset;
+  int tzOffset;
+  int sunset;
   var mapURL;
   var map;
-  var sunrise;
+  int sunrise;
   int weatherCode;
   int maxTemp;
   int minTemp;
@@ -75,7 +76,10 @@ class _TodayState extends State<Today> {
   void updateUI(dynamic weatherOW,weather,time,longitude,latitude){
     //date = weather[0]['date'] ;
     locationOW = weatherOW['timezone'];
+    tzOffset = (weatherOW['timezone_offset']).toInt();
     weatherCondition = weatherOW['current']['weather'][0]['description'];
+//    sunset = weatherOW['current']['sunset'];
+//    sunrise = weatherOW['current']['sunrise'];
     sunset = (weatherOW['current']['sunset']).toInt();
     sunrise = (weatherOW['current']['sunrise']).toInt();
     minTemp = (weather[0]['dewPoint']).toInt();
@@ -104,10 +108,15 @@ class _TodayState extends State<Today> {
     awData = weather;
     owData = weatherOW;
     tzData = time;
+
+    //timestampConverter(lat, lon);
   }
   void updateUI2(dynamic weatherOW,weather,time,longitude,latitude){
     locationOW = weatherOW['timezone'];
     weatherCondition = weatherOW['current']['weather'][0]['description'];
+//    sunset = weatherOW['current']['sunset'];
+//    sunrise = weatherOW['current']['sunrise'];
+    tzOffset = (weatherOW['timezone_offset']).toInt();
     sunset = (weatherOW['current']['sunset']).toInt();
     sunrise = (weatherOW['current']['sunrise']).toInt();
     minTemp = (weatherOW['daily'][0]['temp']['min']).toInt();
@@ -133,7 +142,10 @@ class _TodayState extends State<Today> {
     awData = weather;
     owData = weatherOW;
     tzData = time;
+
+    //timestampConverter(lat, lon);
   }
+
 
 
   Widget weatherData() => DataTable(
@@ -188,13 +200,13 @@ class _TodayState extends State<Today> {
         DataRow(cells:[
           DataCell(Text(AppLocalizations.of(context).translate('s23'),style: Styles.textDefault)),
           DataCell(SvgPicture.asset('assets/icons/sunrise.svg',color: Colors.black,height: 40,width: 40)),
-          DataCell(Text('${timestampConverter(sunrise)}',style: Styles.textDefault)),
+          DataCell(Text('${timestampConverter(sunrise, tzOffset)}',style: Styles.textDefault)),
 
         ]),
         DataRow(cells:[
           DataCell(Text(AppLocalizations.of(context).translate('s24'),style: Styles.textDefault)),
           DataCell(SvgPicture.asset('assets/icons/sunset.svg',color: Colors.black,height: 40,width: 40)),
-          DataCell(Text('${timestampConverter(sunset)}',style: Styles.textDefault)),
+          DataCell(Text('${timestampConverter(sunset, tzOffset)}',style: Styles.textDefault)),
 
         ]),
       ],
@@ -223,7 +235,7 @@ class _TodayState extends State<Today> {
 
            */
           //title: Center(child: Text('${dateConverter(tzData)}', style: Styles.navBarTitle)),
-          title: Center(child: Text('$locationOW', style: Styles.navBarTitle)),
+          title: Center(child: Text('   ')),//Center(child: Text('$locationOW', style: Styles.navBarTitle)),
           backgroundColor: Styles.header1Color,
         ),
         body: SafeArea(
@@ -497,10 +509,42 @@ int mileConverter(int mile){
   return km;
 }
 
-String timestampConverter(var timestamp){
+String timestampConverter(int timestamp, int tzOffset){
+  //int hoursOffset = (tzOffset/3600).toInt();
+
+//  print(timeS);
+//
+//  if(hoursOffset >= 0)
+//    {
+//      timeS = timeS.add(new Duration(hours: hoursOffset.abs()));
+//      print(11111111111112);
+//    }
+//  else
+//    {
+//      timeS = timeS.subtract(new Duration(hours: hoursOffset.abs()));
+//      print(11111111111111);
+//    }
+//
+//  print(timeS);
+
+
+  //print(tzOffset);
+  //print(hoursOffset);
+  /*
+  //var timeS = new DateTime.fromMillisecondsSinceEpoch((timestamp - tzOffset)*1000);
+  var timeS = new DateTime.fromMillisecondsSinceEpoch((timestamp * 1000) + tzOffset);
+  var timeS = new DateTime.fromMillisecondsSinceEpoch(timestamp * 1000);
+  var timeSConverted = (DateFormat('h:mm a').format(timeS));
+  //print(hourConverter(timestamp));
+
+   */
+
+  //original code
   var timeS = new DateTime.fromMillisecondsSinceEpoch(timestamp * 1000);
   var timeSConverted = (DateFormat('h:mm a').format(timeS));
   return timeSConverted;
+  //DateTime myDateTime = myTimeStamp.toDate();
+
 }
 
 String getWeatherIcon(int code, context){ //this one is for the text of the weather condition

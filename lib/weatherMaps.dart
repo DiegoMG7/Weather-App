@@ -37,7 +37,7 @@ class _WeatherMapsState extends State<WeatherMaps>{
   }
 
   void updateUI(dynamic weatherOW,weather,time,longitude,latitude){
-    mapURL = 'https://tile.openweathermap.org/map/clouds/1/1/1.png?appid=54b0c03c77c086a52ee264d043221b63';
+    //mapURL = 'https://tile.openweathermap.org/map/clouds/1/1/1.png?appid=54b0c03c77c086a52ee264d043221b63';
     lon = longitude;
     lat = latitude;
     owData = weatherOW;
@@ -67,10 +67,11 @@ class _WeatherMapsState extends State<WeatherMaps>{
         ),
           new TileLayerOptions(
             urlTemplate: "https://tile.openweathermap.org/map/{layer}/{z}/{x}/{y}.png?appid={APIkey}",
-            opacity: 0.8,
+            opacity: 0.1,
+            retinaMode: true,
             additionalOptions: {
               'APIkey': '54b0c03c77c086a52ee264d043221b63',
-              'layer': 'temp_new',
+              'layer': 'precipitation_new',
             },
         ),
           new MarkerLayerOptions(
@@ -91,7 +92,7 @@ class _WeatherMapsState extends State<WeatherMaps>{
                           return Container(
                             color: Colors.white,
                             child: Center(
-                              child: Text("Info About the weather Map/WeatherMap toggle"),
+                              child: Text("This is your current Location"),
                             ),
                           );
                         }
@@ -103,8 +104,62 @@ class _WeatherMapsState extends State<WeatherMaps>{
             ),
           ],
         ),
+          // new MarkerLayerOptions(
+          //   markers: [
+          //     new Marker(
+          //       width: 80.0,
+          //       height: 80.0,
+          //       point: new LatLng(lat,lon),
+          //       builder: (ctx) =>
+          //       new Container(
+          //         child: //new FlutterLogo(),
+          //         IconButton(
+          //           icon: Icon(Icons.info, size: 50),
+          //           onPressed: (){
+          //             showModalBottomSheet(
+          //                 context: context,
+          //                 builder: (builder){
+          //                   return Container(
+          //                     color: Colors.white,
+          //                     child: Center(
+          //                       child: Text("Info"),
+          //                     ),
+          //                   );
+          //                 }
+          //             );
+          //           },
+          //         ),
+          //         //Icon(Icons.person_pin_circle, size: 50)
+          //       ),
+          //     ),
+          //   ],
+          // ),
         ],
     ),
+      //Image(image: AssetImage('assets/images/${getWeatherIcon(weatherCode[6])}.png'), height: 30, width: 30,)
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          showModalBottomSheet(
+              context: context,
+              builder: (builder){
+                return Container(
+                  height: 100,
+                  color: Colors.white,
+                  child: Center(
+                    child: Column(
+                      children: <Widget>[
+                        Text('Temperature Map', style: Styles.navBarTitle),
+                        Image(image: AssetImage('assets/images/tempmap1.png'), height: 60, width: 400,)
+                      ],
+                    ),
+                  ),
+                );
+              }
+          );
+        },
+        child: const Icon(Icons.info),
+        backgroundColor: Colors.blueAccent,
+      ),
       drawer: Drawer(
         child: ListView(
           // Important: Remove any padding from the ListView.

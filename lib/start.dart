@@ -113,8 +113,9 @@ class _StartState extends State<Start> {
     }
     else if(Geolocator.distanceBetween(37.00099, 70.27300, latitude, longitude) < 2000){ //'Badakhshan, Naw Abad Pingani'
       //AppLocalizations.of(context).translate('s9')
-      print("test");
-      macValue = 'A4:CF:12:A0:2D:F3';
+      print("test-ABADPINGANI");
+      //macValue = 'A4:CF:12:A0:2D:F3';
+      macValue = '3C:71:BF:3E:A4:08';
       latitude = 37.00099;
       longitude = 70.27300;
       networkHelperAW = NetworkHelper('https://api.ambientweather.net/v1/devices/$macValue?apiKey=$apiKeyAW&applicationKey=$applicationKeyAW&endDate=&limit=10');
