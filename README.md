@@ -1,7 +1,7 @@
 HEAD
 # weatherapp
 
-V1 of the Weather App that Development Monitors is going to deploy in Afghanistan
+Final version of the Weather App that Development Monitors LLC deployed in Afghanistan
 
 ## Getting Started
 
